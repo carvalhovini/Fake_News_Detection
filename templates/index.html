@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detecção de Fake News</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Detecção de Fake News</h1>
+        <form action="/" method="post" enctype="multipart/form-data">
+            <label for="text">Verificar Texto:</label>
+            <textarea name="text" id="text" rows="4" cols="50" placeholder="Digite o texto para verificar..."></textarea>
+            <br>
+            <label for="file">Upload de Imagem ou Vídeo:</label>
+            <input type="file" name="file" id="file">
+            <br>
+            <button type="submit">Verificar</button>
+        </form>
+        <div class="result">
+            <h2>Resultado:</h2>
+            <p>{{ result }}</p>
+        </div>
+    </div>
+</body>
+</html>
